@@ -71,7 +71,7 @@
             if (!this.showdownEnabled) {
                 return "";
             }
-            return $sce.trustAsHtml(mdConverter.makeHtml($sanitize(this.ngModel)));
+            return $sce.trustAsHtml($sanitize(mdConverter.makeHtml(this.ngModel)));
         };
     }
 
