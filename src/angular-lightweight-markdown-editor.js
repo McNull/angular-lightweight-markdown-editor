@@ -44,7 +44,7 @@
         }
     }
 
-    function markdownController($sce) {
+    function markdownController($sce, $sanitize) {
         this.preview = false;
 		
 		if(typeof this.showPreview !== "undefined") {        	
