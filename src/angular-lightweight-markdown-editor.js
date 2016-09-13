@@ -44,7 +44,7 @@
         }
     }
 
-    function markdownController($sce) {
+    function markdownController($sce, $sanitize) {
         this.preview = false;
 		
 		if(typeof this.showPreview !== "undefined") {        	
@@ -71,7 +71,7 @@
             if (!this.showdownEnabled) {
                 return "";
             }
-            return $sce.trustAsHtml(mdConverter.makeHtml(this.ngModel));
+            return $sce.trustAsHtml($sanitize(mdConverter.makeHtml(this.ngModel)));
         };
     }
 
